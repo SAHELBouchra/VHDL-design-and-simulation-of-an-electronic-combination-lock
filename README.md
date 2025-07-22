@@ -92,15 +92,6 @@ This table shows the 16-bit one-hot encoding sent by the keypad for each key pre
 3. Comparator checks stored sequence against `1234`.  
 4. If match: output `S = 1` (unlock), else `S = 0`.
 
----
-
-## 🧠 Skills Gained
-
-- VHDL component modeling and simulation  
-- Digital design with memory and comparators  
-- FPGA-based implementation  
-- Understanding bus systems and encoding  
-- Hardware testing using simulation tools
 
 
 
