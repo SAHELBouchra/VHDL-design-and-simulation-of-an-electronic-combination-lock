@@ -4,13 +4,13 @@
 <img width="353" height="142" alt="image" src="https://github.com/user-attachments/assets/4bb6fdce-53b6-4881-ae88-16ca993e751e" />
 </p>
 
-## 📘 Introduction
+## Introduction
 
 This project presents the design and simulation of a **digital combination lock** system using **VHDL**, implemented on a **Cyclone V FPGA**. The system takes a 4-digit code input via a 16-key keypad, encodes and stores each digit, and compares the full sequence to a predefined key to determine access permission.
 
 ---
 
-## 🧠 Objectives
+## Objectives
 
 - Design each component (encoder, detector, memory, comparator) in **VHDL**
 - Simulate and validate functionality using **ModelSim**
@@ -19,7 +19,7 @@ This project presents the design and simulation of a **digital combination lock*
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
 The system consists of the following main modules:
 
@@ -28,14 +28,14 @@ The system consists of the following main modules:
 - **Memory Block** – Stores the last 4 entered digits (16-bit total)  
 - **Comparator** – Compares stored input with the predefined key (`1234`)
 
-### 🖼 Architecture Diagram
+### Architecture Diagram
 
 ![IMG-20240119-WA0003](https://github.com/user-attachments/assets/92f2d4fb-2de6-48db-a362-e96f9be01eff)
 
 
 ---
 
-## 🧾 Keypad Input Table – Data Bus States
+## Keypad Input Table – Data Bus States
 
 This table shows the 16-bit one-hot encoding sent by the keypad for each key pressed:
 
@@ -44,39 +44,39 @@ This table shows the 16-bit one-hot encoding sent by the keypad for each key pre
 
 ---
 
-## 📦 Components Description
+## Components Description
 
-### ✅ Encoder
+### Encoder
 - Input: 16-bit one-hot code from keypad  
 - Output: 4-bit binary index of the pressed key
 
-### ✅ Detector
+### Detector
 - Monitors input bus  
 - Triggers a signal when a key is pressed
 
-### ✅ Memory
+### Memory
 - Stores the last 4 entered digits  
 - Uses 4 shift registers (4 bits each)
 
-### ✅ Comparator
+### Comparator
 - Compares 16-bit stored value with predefined key `16'h2C48` (equivalent to `1234`)  
 - Outputs `S = 1` if correct, else `S = 0`
 
 ---
 
-## 🧪 Simulation & Implementation
+## Simulation & Implementation
 
 - **Simulation**: Using ModelSim  
 - **Synthesis**: Using Quartus Prime  
 - **Target FPGA**: Cyclone V – 5CGXFC7C6F23I7
 
-### 📌 FPGA Pin Mapping
+### FPGA Pin Mapping
 
 ![IMG-20240119-WA0004](https://github.com/user-attachments/assets/55b897e3-f87f-4665-862d-5b94e6628c01)
 
 ---
 
-## 💻 Tools Used
+## Tools Used
 
 - **ModelSim** – Simulation and waveform verification  
 - **Quartus Prime** – FPGA design suite for synthesis and layout  
@@ -85,7 +85,7 @@ This table shows the 16-bit one-hot encoding sent by the keypad for each key pre
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. User inputs 4 digits using a keypad.  
 2. Inputs are encoded and stored into memory sequentially.  
