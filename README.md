@@ -92,6 +92,7 @@ This table shows the 16-bit one-hot encoding sent by the keypad for each key pre
 3. Comparator checks stored sequence against `1234`.  
 4. If match: output `S = 1` (unlock), else `S = 0`.
 
+![IMG-20240119-WA0005](https://github.com/user-attachments/assets/e18465d3-4da2-42da-aa5a-7b6eef19cfe3)
 
 
 
